@@ -6,8 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="shortcut icon" href="../build/assets/images/jagung.svg">
         <title>Jagung</title>
+
+        {{-- style --}}
         @vite(['resources/js/app.js'])
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         {{-- Navbar --}}
@@ -22,16 +25,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb- mb-lg-0 justify-content-end">
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold text-black " href="/home">Home</a>
+                            <a class="nav-link fw-bold text-success " href="/home">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold text-black " href="/product">Product</a>
+                            <a class="nav-link fw-bold text-success " href="/product">Product</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold text-black " href="/contact">Contact</a>
+                            <a class="nav-link fw-bold text-success " href="/contact">Contact</a>
                         </li>
                         <li class="nav-item py- py-sm-0 me-3">
-                            <a href="/profile" class="btn btn-bd-primary ms-sm- w-100 w-md-auto fw-bold">Login</a>
+                            <a href="/profile" class="btn btn-bd-primary ms-sm- w-100 w-md-auto fw-bold text-success    ">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -63,7 +66,7 @@
             </div>
 
             <!-- Copyright -->
-            <div class="text-center text-black pb-3 pt-2">
+            <div class="text-center text-success pb-3 pt-2">
                 © 2023 Copyright: Lorem ipsum
             </div>
             <!-- Copyright -->
@@ -89,6 +92,11 @@
         });
         
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @stack('script')
+    <script>
+        AOS.init();
+    </script>
 
 </html>

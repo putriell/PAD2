@@ -28,5 +28,14 @@ Route::get('/contact', function () {
 Route::get('/profile', function () {
     return view('Page/profile');
 });
+Route::get('/profile/add-produk', function () {
+    return view('Page/profile');
+});
+Route::get('/login', function () {
+    return view('Page/login');
+});
+Route::get('/register', function () {
+    return view('Page/register');
+});
 
 

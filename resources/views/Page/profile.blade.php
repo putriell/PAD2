@@ -56,7 +56,7 @@
                         <h4 class="text-white mt-1 ms-2">Daftar Produk</h4>
                     </div>
                     <div class="col-md-4 p-2 align-items-center text-end">
-                        <button data-bs-toggle="modal" data-bs-target="#add" class="btn btn-bd-primary ms-sm-auto w-md-auto me-3 fw-bold border border-2 border-dark">
+                        <button data-bs-toggle="modal" data-bs-target="#add" class="btn btn-bd-primary ms-sm-auto w-md-auto me-3 fw-bold border border-2 border-success">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill mb-1 me-1" viewBox="0 0 16 16">
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
                               </svg>

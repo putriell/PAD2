@@ -46,79 +46,99 @@
     {{-- End Search bar --}}
 
     {{-- card --}}
-    <div class="row justify-content-start ms-3">
+    <div class="row justify-content-center ms-3">
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
         <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
             <div class="card-body ms-1">
-                <h5 class="card-text">Wortel</h5>
-                <h5 class="card-text fw-bold">Rp100.000</h5>
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
+            </div>
+        </div>
+        <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
+            <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
+            <div class="card-body ms-1">
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
+            </div>
+        </div>
+        <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
+            <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
+            <div class="card-body ms-1">
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
+            </div>
+        </div>
+        <div class="card bg-primary mb-4 mx-3 p-0" style="width: 15rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
+            <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
+            <div class="card-body ms-1">
+                <h5 class="card-text text-success">Wortel</h5>
+                <h5 class="card-text fw-bold text-success">Rp100.000</h5>
             </div>
         </div>
     </div>
-    
     {{-- End Card --}}
 
     {{-- Pagination --}}
@@ -141,8 +161,8 @@
             </ul>
         </div>  
     </nav>
-    {{-- Pagination --}}
-
+    {{-- End Pagination --}}
+    
 </div>
 
 
