@@ -25,10 +25,11 @@ Route::get('/home', function () {
 Route::get('/contact', function () {
     return view('Page/contact');
 });
-Route::get('/p', function () {
-    return view('cms/p');
+Route::get('/detailProfile', function () {
+    return view('Page/detailProfile');
 });
 
+Route::get('/detailProfile', [ProfileController::class, 'detailProfile']);
 Route::get('/product', [ProductController::class, 'show']);
 // Route::get('/product/search/{keyword}', [ProductController::class, 'search']) -> name('product.search');
 

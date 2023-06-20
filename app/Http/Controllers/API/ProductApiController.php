@@ -49,7 +49,7 @@ class ProductApiController extends Controller
 
         $data = new ProductResource($cek);
 
-        return $this -> sendResponse($cek, 'Successfull get data');
+        return $this -> sendResponse($data, 'Successfull get data');
     }
 
     /**

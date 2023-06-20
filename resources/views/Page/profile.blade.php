@@ -79,7 +79,7 @@
             
                     @foreach ($data_produk as $data)
                         {{-- Card --}}
-                        <div class="card bg-primary mb-4 mx-3 p-0" style="width: 9rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail">
+                        <div class="card bg-primary mb-4 mx-3 p-0" style="width: 9rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="{{ '#detail'.$data -> id }}">
                             <img src="../build/assets/images/wortel2.svg" class="card-img-top" alt="wortel">
                             <div class="card-body ms-1">
                                 <h5 class="card-text text-success">{{ $data -> nama_produk }}</h5>
@@ -102,7 +102,7 @@
 
 
                         <!-- Modal detail produk -->
-                        <div class="modal fade" id="detail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="{{ 'detail'.$data -> id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg modal-dialog-centered">
                                 <div class="modal-content bg-primary">
                                     {{-- header --}}
