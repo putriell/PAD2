@@ -45,10 +45,13 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/admin', [ProfileController::class, 'adm'])-> name('admin');
     Route::delete('/logout', [AuthController::class, 'logout']) -> name('logout');
     
-
+    // product
     Route::post('/profile',[ProductController::class, 'store']) -> name('product.store');
-    Route::post('/profile/delete/{id}',[ProductController::class, 'destroy']) -> name('product.destroy');
-    Route::post('/profile/edit/{id}',[ProductController::class, 'update']) -> name('product.edit');
+    Route::post('/profile/delete-product/{id}',[ProductController::class, 'destroy']) -> name('product.destroy');
+    Route::post('/profile/edit-product/{id}',[ProductController::class, 'update']) -> name('product.edit');
+
+    // edit profile
+    Route::post('/profile/edit-profile/{id}',[ProfileController::class, 'editProfile']) -> name('profile.edit');
 });
 
 Route::controller(GoogleController::class) -> group(function(){

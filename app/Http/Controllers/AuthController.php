@@ -38,18 +38,8 @@ class AuthController extends Controller
             'password' => $request -> password
         ];
 
-        // $mail = $request -> email;
-        // $dataUser = User::where('email', $mail);
-        // // $level = $dataUser['id'];
-        // dd($dataUser);
-
-        // if ($level == 1) {
-        //     if (Auth::attempt($credentials)) {
-        //         return redirect('/admin') -> with('success', 'Login berhasil');
-        //     }
-        // }
         if (Auth::attempt($credentials)) {
-            if (Auth::user() -> id == '1') {
+            if (Auth::user() -> level == '1') {
                 return redirect('/admin') -> with('success', 'Login berhasil');
             }
 

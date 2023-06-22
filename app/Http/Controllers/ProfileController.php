@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\produk;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,4 +30,30 @@ class ProfileController extends Controller
     public function adm() {
         return view('cms/admin');
     }
+
+    public function editProfile(Request $request, string $id) {
+        $profile = User::find($id);
+
+        if ($request -> hasFile('foto')) {
+            $profile -> name = $request -> name_profile;
+            $profile -> phone = $request -> phone;
+            $profile -> address = $request -> address;
+
+            $request -> file('foto') -> move('build\assets\foto_produk', $request -> file('foto') -> getClientOriginalName());
+            $profile -> foto = $request -> file('foto') -> getClientOriginalName();
+
+            $profile -> save();
+
+        } else {
+            $profile -> name = $request -> name_profile;
+            $profile -> phone = $request -> phone;
+            $profile -> address = $request -> address;
+
+            $profile -> save();
+        }
+
+        return redirect('/profile') -> with('editProfile', 'Profile berhasil diubah');
+
+    }
+
 }

@@ -59,7 +59,6 @@
                 </div>
                 {{-- End Card --}}
 
-
                 <!-- Modal detail produk -->
                 <div class="modal fade" id="{{ 'detail'.$data -> id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered">

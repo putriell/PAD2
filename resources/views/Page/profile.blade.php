@@ -45,8 +45,8 @@
                     </div>
                     <div class="row mt-5 ms-2">
                         <div class="col p-0">
-                            <h6 class="text-success">edit profile</h6>
-                            <h6 class="text-success">change password</h6>
+                            <a data-bs-toggle="modal" data-bs-target="#editProfile"><h6 class="text-success">edit profile</h6></a>
+                            <a data-bs-toggle="modal" data-bs-target="#"><h6 class="text-success">change password</h6></a>
                             <h6 class="text-success">Jumlah produk anda : {{ $jumlah_produk }}</h6>
                         </div>
                     </div>
@@ -308,6 +308,112 @@
 </div>
 
 
+{{-- Modal edit profile --}}
+<div class="modal fade" id="editProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content bg-primary">
+
+            {{-- header --}}
+            <div class="row ms-5 mt-4 mb-3">
+                <button type="button" class="btn btn-bd-primary fw-bold " style="width: 100px;" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" style="margin-bottom: 3px; margin-right: 3px" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    Back
+                </button>
+            </div>
+            
+            <div class="row text-center">
+                <h2 class="fw-bold">Edit Profile</h2>
+            </div>
+
+            {{-- body --}}
+            <div class="row mx-5 mt-4">
+                <form action="{{ route('profile.edit', Auth::user() -> id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="name_profile" class="form-label fw-bold">Name </label>
+                        <input type="text" class="form-control" name="name_profile" id="name_profile" value="{{ Auth::user() -> name }}">
+                    </div>
+                    <fieldset disabled>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" value="{{ Auth::user() -> email }}">
+                        </div>
+                    </fieldset>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label fw-bold">Phone</label>
+                        <input type="mobile" class="form-control" name="phone" id="phone" value="{{ Auth::user() -> phone }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label fw-bold">address</label>
+                        <input type="text" class="form-control" name="address" id="address" value="{{ Auth::user() -> address }}">
+                    </div>
+                    {{-- <div class="mb-3 mt-4">
+                        <label for="upImg" class="form-label fw-bold">Foto</label>
+                        <input class="form-control" type="file" name="foto" id="upImg" multiple>
+                    </div> --}}
+                    <button class="btn btn-bd-primary w-100 mt-3 fw-bold mb-5" type="submit" name="editProfile" id="editProfile">Simpan Profile</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{{-- Modal Change Password --}}
+<div class="modal fade" id="editProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content bg-primary">
+
+            {{-- header --}}
+            <div class="row ms-5 mt-4 mb-3">
+                <button type="button" class="btn btn-bd-primary fw-bold " style="width: 100px;" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" style="margin-bottom: 3px; margin-right: 3px" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    Back
+                </button>
+            </div>
+            
+            <div class="row text-center">
+                <h2 class="fw-bold">Change Password</h2>
+            </div>
+
+            {{-- body --}}
+            <div class="row mx-5 mt-4">
+                <form action="" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="name_profile" class="form-label fw-bold">Name </label>
+                        <input type="text" class="form-control" name="name_profile" id="name_profile" value="{{ Auth::user() -> name }}">
+                    </div>
+                    <fieldset disabled>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" value="{{ Auth::user() -> email }}">
+                        </div>
+                    </fieldset>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label fw-bold">Phone</label>
+                        <input type="mobile" class="form-control" name="phone" id="phone" value="{{ Auth::user() -> phone }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label fw-bold">address</label>
+                        <input type="text" class="form-control" name="address" id="address" value="{{ Auth::user() -> address }}">
+                    </div>
+                    {{-- <div class="mb-3 mt-4">
+                        <label for="upImg" class="form-label fw-bold">Foto</label>
+                        <input class="form-control" type="file" name="foto" id="upImg" multiple>
+                    </div> --}}
+                    <button class="btn btn-bd-primary w-100 mt-3 fw-bold mb-5" type="submit" name="editProfile" id="editProfile">Simpan Profile</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 @endsection
