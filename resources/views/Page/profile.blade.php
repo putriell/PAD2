@@ -45,8 +45,8 @@
                     </div>
                     <div class="row mt-5 ms-2">
                         <div class="col p-0">
-                            <a data-bs-toggle="modal" data-bs-target="#editProfile"><h6 class="text-success">edit profile</h6></a>
-                            <a data-bs-toggle="modal" data-bs-target="#"><h6 class="text-success">change password</h6></a>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#editProfile"><h6 class="text-success">edit profile</h6></a>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#changePassword"><h6 class="text-success">change password</h6></a>
                             <h6 class="text-success">Jumlah produk anda : {{ $jumlah_produk }}</h6>
                         </div>
                     </div>
@@ -87,14 +87,20 @@
                             </div>
                             <div class="row justify-content-center mb-2">
                                 <div class="col-4 ms-1 bg-danger rounded">
-                                    <a data-bs-toggle="modal" data-bs-target="{{ '#delete'.$data -> id }}">
-                                        <i class="bi bi-trash-fill ms-2 fs-5"></i>
-                                    </a>
+                                    <div class="col">
+                                        <a data-bs-toggle="modal" data-bs-target="{{ '#delete'.$data -> id }}">
+                                            <i class="bi bi-trash-fill ms-2 fs-5"></i>
+                                        </a>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-4 ms-2 bg-warning rounded">
-                                    <a data-bs-toggle="modal" data-bs-target="{{ '#edit'.$data -> id }}">
-                                        <i class="bi bi-pencil-fill ms-2 fs-5"></i>
-                                    </a>
+                                    <div class="col">
+                                        <a data-bs-toggle="modal" data-bs-target="{{ '#edit'.$data -> id }}">
+                                            <i class="bi bi-pencil-fill ms-2 fs-5"></i>
+                                        </a>
+                                    </div>
+                                    
                                 </div>
                             </div>    
                         </div>
@@ -160,7 +166,7 @@
 
                         {{-- Modal Konfirmasi hapus--}}
                         <div class="modal fade" id="{{ 'delete'.$data -> id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Hapus produk?</h1>
@@ -363,7 +369,7 @@
 
 
 {{-- Modal Change Password --}}
-<div class="modal fade" id="editProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+<div class="modal fade" id="changePassword" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content bg-primary">
 
@@ -383,31 +389,21 @@
 
             {{-- body --}}
             <div class="row mx-5 mt-4">
-                <form action="" method="POST">
+                <form action="{{ route('changePassword') }}" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label for="name_profile" class="form-label fw-bold">Name </label>
-                        <input type="text" class="form-control" name="name_profile" id="name_profile" value="{{ Auth::user() -> name }}">
-                    </div>
-                    <fieldset disabled>
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-bold">Email</label>
-                            <input type="email" class="form-control" name="email" id="email" value="{{ Auth::user() -> email }}">
-                        </div>
-                    </fieldset>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label fw-bold">Phone</label>
-                        <input type="mobile" class="form-control" name="phone" id="phone" value="{{ Auth::user() -> phone }}">
+                        <label for="old_password" class="form-label fw-bold">Password </label>
+                        <input type="password" class="form-control" name="old_password" id="old_password">
                     </div>
                     <div class="mb-3">
-                        <label for="address" class="form-label fw-bold">address</label>
-                        <input type="text" class="form-control" name="address" id="address" value="{{ Auth::user() -> address }}">
+                        <label for="new_password" class="form-label fw-bold">New Password </label>
+                        <input type="password" class="form-control" name="new_password" id="new_password">
                     </div>
-                    {{-- <div class="mb-3 mt-4">
-                        <label for="upImg" class="form-label fw-bold">Foto</label>
-                        <input class="form-control" type="file" name="foto" id="upImg" multiple>
-                    </div> --}}
-                    <button class="btn btn-bd-primary w-100 mt-3 fw-bold mb-5" type="submit" name="editProfile" id="editProfile">Simpan Profile</button>
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label fw-bold">Confirm New Password </label>
+                        <input type="password" class="form-control" name="confirm_password" id="confirm_password">
+                    </div>
+                    <button class="btn btn-bd-primary w-100 mt-3 fw-bold mb-5" type="submit" name="editProfile" id="editProfile">Ganti Password</button>
                 </form>
             </div>
 

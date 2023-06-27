@@ -52,6 +52,7 @@ Route::group(['middleware' => 'auth'], function (){
 
     // edit profile
     Route::post('/profile/edit-profile/{id}',[ProfileController::class, 'editProfile']) -> name('profile.edit');
+    Route::post('/profile/change-password',[ProfileController::class, 'changePassword']) -> name('changePassword');
 });
 
 Route::controller(GoogleController::class) -> group(function(){

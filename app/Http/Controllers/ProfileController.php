@@ -6,6 +6,7 @@ use App\Models\produk;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -54,6 +55,34 @@ class ProfileController extends Controller
 
         return redirect('/profile') -> with('editProfile', 'Profile berhasil diubah');
 
+    }
+
+    public function changePassword (Request $request) {
+
+        $new_password = $request -> old_password;
+        $old_password = Auth::user() -> password;
+        $changePW = user::where('password', $old_password) -> first();
+
+        if (Hash::check($new_password, $old_password)) {
+
+            if ($request -> new_password == $request -> confirm_password) {
+                // dd($changePW);
+                $changePW -> password = $request -> new_password;
+                $changePW -> save();
+
+                return redirect('/profile') -> with('successChangePassword', 'Prassword berhasil diubah');
+
+            } else {
+
+                return redirect('/profile') -> with('pwBerbeda', 'Prassword baru yang dimasukan tidak cocok');
+
+            }
+            
+        } else {
+            
+            return redirect('/profile') -> with('passwordLamaSalah', 'Password lama anda salah');
+
+        }
     }
 
 }
