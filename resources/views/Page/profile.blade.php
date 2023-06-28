@@ -2,12 +2,6 @@
 
 @section('content')
 
-@if (Session::has('success_add'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('success_add') }}
-    </div>
-@endif
-
 <section>
     <div class="row align-item-center">
         <h1 class="disply-2 text-center text-success my-5 py-5">
@@ -18,6 +12,31 @@
 
 <section>
     <div class="container">
+
+        {{-- alert --}}
+        @if (Session::has('success_add'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('success_add') }}
+            </div>
+        @endif
+        @if (Session::has('successChangePassword'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('successChangePassword') }}
+            </div>
+        @endif
+        @if (Session::has('pwBerbeda'))
+            <div class="alert alert-warning" role="alert">
+                {{ Session::get('pwBerbeda') }}
+            </div>
+        @endif
+        @if (Session::has('passwordLamaSalah'))
+            <div class="alert alert-danger" role="alert">
+                {{ Session::get('passwordLamaSalah') }}
+            </div>
+        @endif
+        {{-- end alert --}}
+
+        
         <div class="row mb-5">
             {{-- card profile --}}
             <div class="col-md-4 p-3">
@@ -113,12 +132,21 @@
                                 <div class="modal-content bg-primary">
                                     {{-- header --}}
                                     <div class="row ms-5 mt-4 mb-3">
-                                        <button type="button" class="btn btn-bd-primary fw-bold " style="width: 100px;" data-bs-dismiss="modal" aria-label="Close">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" style="margin-bottom: 3px; margin-right: 3px" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                            </svg>
-                                            Back
-                                        </button>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-bd-primary fw-bold " style="width: 100px;" data-bs-dismiss="modal" aria-label="Close">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" style="margin-bottom: 3px; margin-right: 3px" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                                </svg>
+                                                Back
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="col-2 ms-auto">
+                                            <a href="">
+                                                <i class="bi bi-person-circle text-dark fs-4"></i>
+                                            </a>
+                                        </div>
+                                        
                                     </div>
 
                                     {{-- body --}}

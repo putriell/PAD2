@@ -67,14 +67,14 @@ class ProfileController extends Controller
 
             if ($request -> new_password == $request -> confirm_password) {
                 // dd($changePW);
-                $changePW -> password = $request -> new_password;
+                $changePW -> password = Hash::make($request -> new_password);
                 $changePW -> save();
 
-                return redirect('/profile') -> with('successChangePassword', 'Prassword berhasil diubah');
+                return redirect('/profile') -> with('successChangePassword', 'Password berhasil diubah');
 
             } else {
 
-                return redirect('/profile') -> with('pwBerbeda', 'Prassword baru yang dimasukan tidak cocok');
+                return redirect('/profile') -> with('pwBerbeda', 'Password baru yang dimasukan tidak cocok');
 
             }
             

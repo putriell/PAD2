@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContentHome;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -16,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('Page/home');
-});
-Route::get('/home', function () {
-    return view('Page/home');
-});
+
 Route::get('/contact', function () {
     return view('Page/contact');
 });
@@ -29,6 +25,8 @@ Route::get('/detailProfile', function () {
     return view('Page/detailProfile');
 });
 
+Route::get('/', [ContentHome::class, 'show']);
+Route::get('/home', [ContentHome::class, 'show']);
 Route::get('/detailProfile', [ProfileController::class, 'detailProfile']);
 Route::get('/product', [ProductController::class, 'show']);
 // Route::get('/product/search/{keyword}', [ProductController::class, 'search']) -> name('product.search');

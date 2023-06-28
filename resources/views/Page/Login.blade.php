@@ -14,7 +14,7 @@
     <body>
         <section>
             <div class="container">
-                <div class="row my-5 bg-primary rounded-5">
+                <div class="row my-4 bg-primary rounded-5">
                     <div class="col">
                         <div class="row m-5">
                             <div class="col-md-6">
@@ -65,13 +65,29 @@
                                         </div>
                                     </div>
                                     <button class="btn btn-bd-primary w-100 mt-4" type="submit" name="login" id="login">Log in</button>
-                                    <div class="mt-2 text-center">
+
+                                    {{-- Login with google --}}
+                                    <div class="text-center mt-3">
                                         <a href="{{ route('auth.google') }}">
-                                            <i class="bi bi-google text-danger fs-3"></i>
+                                            <div class="card mb-3" style="max-width: 5000px;">
+                                                <div class="row g-0 p-0 align-items-center ">
+                                                    <div class="col-md-3"> 
+
+                                                    </div>
+                                                    <div class="col-md-1 ms-3">
+                                                        <img src="../build/assets/images/google-logo.png" width="30px" class="img-fluid rounded-start" alt="google">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="card-body p-2">
+                                                            <p class="card-text text-dark">Sign in with Google</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </a>
                                     </div>
                                     
-                                    <div class="mt-2 text-center">
+                                    <div class=" text-center">
                                         <p class=" text-success">don't have an account? <a href="/register" class="text-success"> Create account</a></p>
                                     </div>
                                 </form>                   
